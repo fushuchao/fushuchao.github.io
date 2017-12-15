@@ -1,0 +1,415 @@
+html, body {
+    position: relative;
+    height: 100%;
+}
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color:#000;
+    margin: 0;
+    padding: 0;
+}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+
+/*自定义按钮开始*/
+.swiper-button-next{
+    background: url("../img/up.png")no-repeat center;
+    top: auto;
+    bottom: 4%;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+    animation: run 1s linear infinite;
+}
+@keyframes run {
+    from{
+        bottom: 1%;
+        opacity: 1;
+    }
+    to{
+        bottom: 4%;
+        opacity: 0;
+    }
+}
+/*自定义按钮结束*/
+
+/*音乐部分开始*/
+#music{
+    width: 20px;
+    height: 20px;
+    z-index: 9;
+    top: 2%;
+    right: 8%;
+    position: fixed;
+}
+#music .music_Img{
+    width: 35px;
+    height: 35px;
+    overflow: hidden;
+    position: relative;
+    left: 8px;
+    top: 8px;
+    animation: music 1.5s linear infinite;
+}
+@keyframes music {
+    from{
+        transform: rotate(0deg)
+    }
+    to{
+        transform: rotate(360deg)
+    }
+}
+/*音乐部分结束*/
+
+/*后几屏的综合样式开始*/
+
+.swiper-slide .top_left{
+    position: absolute;
+    width: 20%;
+    height: 10%;
+    top: 3%;
+    left: 5%;
+}
+.swiper-slide .top_left img{
+    opacity: 0.8;
+}
+.swiper-slide .top_left .img1{
+    position: absolute;
+    width: 70%;
+    top: 17%;
+    left: 67%;
+    animation: second 15s linear infinite;
+}
+.swiper-slide .top_left .img2{
+    position: absolute;
+    width: 80%;
+    top: 9%;
+    left: 60%;
+    animation: second 15s linear infinite;
+}
+.swiper-slide .top_left .img3{
+    position: absolute;
+    width: 90%;
+    top: 3%;
+    left: 55%;
+    animation: second 15s linear infinite;
+}
+.swiper-slide .top_left .img4{
+    left: 51%;
+    position: absolute;
+    width: 100%;
+    animation: second 15s linear infinite;
+}
+.swiper-slide .top_left .img5{
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    width: 150%;
+}
+.swiper-slide .bottom{
+    width: 68%;
+    position: absolute;
+    top: 88%;
+    font-size: 2vw;
+    color: rgb(89, 199, 249);
+}
+.swiper-slide .bottom hr{
+    margin: 0;
+    background-color: rgb(89, 199, 249);
+    height: 1px;
+    border: none;
+    opacity: 0.8;
+}
+@keyframes second {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+/*后几屏的综合样式结束*/
+
+
+
+/*第一屏开始*/
+.swiper-slide.one{
+    background: url("../img/bg.jpg");
+    background-size: 100% 100%;
+}
+.swiper-slide.one .top_img{
+    z-index: 1;
+    width: 100%;
+    top: -35%;
+    position: absolute;
+}
+.swiper-slide.one .top_img img{
+    position: relative;
+    width: 100%;
+    animation: first 10s linear infinite;
+}
+.swiper-slide.one .bottom_img{
+    z-index: 1;
+    width: 75%;
+    top: 80%;
+    position: absolute;
+}
+.swiper-slide.one .bottom_img img{
+    position: relative;
+    width: 100%;
+    animation: first 10s linear infinite;
+}
+@keyframes first {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.swiper-slide.one .top_text{
+    position: absolute;
+    top: 15%;
+    width: 80%;
+    height:10%;
+    font-size: 8vw;
+    color: rgb(89, 199, 249);
+}
+.swiper-slide.one .center{
+    position: absolute;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: url("../img/yaoqinghan.gif");
+    background-size: 100% 100%;
+    height: 25%;
+}
+.swiper-slide.one .center .center_img{
+    width: 100%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    position: absolute;
+}
+.swiper-slide.one .center .center_img img{
+    width: 60%;
+}
+.swiper-slide.one .bottom_text{
+    position: absolute;
+    top: 65%;
+}
+.swiper-slide.one .bottom_text img{
+    opacity: 0.4;
+    width: 50%;
+}
+.swiper-slide.one .bottom_text span p{
+    padding-top: 5px;
+    font-family: "微软雅黑";
+    font-size: 4vw;
+    margin: 0;
+    color: rgb(89, 199, 249);
+}
+.swiper-slide.one .bottom_text span .p1{
+    font-size: 3vw;
+}
+/*第一屏结束*/
+/*第二屏开始*/
+.swiper-slide.two{
+    background: url("../img/bg2.jpg");
+    background-size: 100% 100%;
+}
+.swiper-slide.two .top_left span{
+    width: 100%;
+    position: absolute;
+    color: rgb(89, 199, 249);
+    font-size: 5vw;
+    left: 151%;
+    top: 55%;
+}
+.swiper-slide.two .center{
+    width: 70%;
+    position: absolute;
+    top: 13%;
+}
+.swiper-slide.two .center span{
+    font-size: 4vw;
+    padding-left: 15px;
+    color: rgb(89, 199, 249);
+}
+.swiper-slide.two .center .s1{
+    position: relative;
+    left: -15%;
+}
+/*第二屏结束*/
+/*第三屏开始*/
+.swiper-slide.three{
+    background: url("../img/bg2.jpg");
+    background-size: 100% 100%;
+}
+.swiper-slide.three .top_left span{
+    width: 100%;
+    position: absolute;
+    color: rgb(89, 199, 249);
+    font-size: 5vw;
+    left: 151%;
+    top: 55%;
+}
+
+.swiper-slide.three .center{
+    width: 70%;
+    position: absolute;
+    top: 15%;
+}
+.swiper-slide.three .center p{
+    font-size: 4vw;
+    color: rgb(89, 199, 249);
+}
+/*第三屏结束*/
+/*第四屏开始*/
+/*.swiper-slide.four{
+    background: url("../img/bg3.gif");
+    background-size: 100% 100%;
+}
+.swiper-slide.four .top_left span{
+    width: 100%;
+    position: absolute;
+    color: rgb(89, 199, 249);
+    font-size: 5vw;
+    left: 151%;
+    top: 55%;
+}
+.swiper-slide.four .top_text{
+    top: 25%;
+    position: absolute;
+    width: 60%;
+}
+.swiper-slide.four .top_text span{
+    color: rgb(89, 199, 249);
+}
+.swiper-slide.four .top_text img{
+    width: 100%;
+    opacity: 0.6;
+}
+.swiper-slide.four .bottom_text{
+    top: 35%;
+    position: absolute;
+    width: 60%;
+}
+.swiper-slide.four .bottom_text span{
+    color: rgb(89, 199, 249);
+}
+.swiper-slide.four .bottom_text img{
+    width: 100%;
+    opacity: 0.6;
+}*/
+/*第四屏结束*/
+/*第五屏开始*/
+.swiper-slide.five{
+    background: url("../img/bg2.jpg");
+    background-size: 100% 100%;
+}
+.swiper-slide.five .top_left span{
+    width: 100%;
+    position: absolute;
+    color: rgb(89, 199, 249);
+    font-size: 5vw;
+    left: 151%;
+    top: 55%;
+}
+.swiper-slide.five .top_text{
+    top: 55%;
+    position: absolute;
+    width: 60%;
+}
+.swiper-slide.five .top_text span{
+    color: rgb(89, 199, 249);
+}
+.swiper-slide.five .top_text img{
+    width: 100%;
+    opacity: 0.6;
+}
+.swiper-slide.five .bottom_text span{
+    color: rgb(89, 199, 249);
+}
+.swiper-slide.five .bottom_text img{
+    width: 100%;
+    opacity: 0.6;
+}
+.swiper-slide.five .s1{
+    transform: translate(-50%);
+    top: -21%;
+    position: absolute;
+    left: 50%;
+}
+.swiper-slide.five .bottom_text{
+    width: 60%;
+    top: 70%;
+    position: absolute;
+}
+/*百度地图开始*/
+#map{
+    top: 18%;
+    position: absolute;
+    border: 4px solid rgba(89,199,249,1);
+}
+/*百度地图结束*/
+/*第五屏结束*/
+/*第六屏开始*/
+.swiper-slide.six{
+    z-index: 2;
+    background: url("../img/bg3.gif");
+    background-size: 100% 100%;
+}
+.swiper-slide.six .top_left span{
+    width: 100%;
+    position: absolute;
+    color: rgb(89, 199, 249);
+    font-size: 5vw;
+    left: 151%;
+    top: 55%;
+}
+.swiper-slide.six .form input{
+    margin-top: 10%;
+}
+.swiper-slide.six .form{
+    position: absolute;
+    top: 30%;
+}
+.swiper-slide.six .form .form-control.sub{
+    border-radius: 10px;
+    color: white;
+    background: rgb(106, 118, 146);
+    border: none;
+}
+.swiper-slide.six .tel{
+    color: rgb(89, 199, 249);
+    top: 82%;
+    position: absolute;
+    font-size: 2vw;
+}
+/*第六屏结束*/
