@@ -257,6 +257,7 @@ body {
     top: 13%;
 }
 .swiper-slide.two .center span{
+    font-size: 4vw;
     padding-left: 15px;
     color: rgb(89, 199, 249);
 }
@@ -285,6 +286,7 @@ body {
     top: 15%;
 }
 .swiper-slide.three .center p{
+    font-size: 4vw;
     color: rgb(89, 199, 249);
 }
 /*第三屏结束*/
