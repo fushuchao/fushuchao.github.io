@@ -347,6 +347,7 @@ body {
     width: 60%;
 }
 .swiper-slide.five .top_text span{
+    font-size: 5vw;
     color: rgb(89, 199, 249);
 }
 .swiper-slide.five .top_text img{
@@ -354,6 +355,7 @@ body {
     opacity: 0.6;
 }
 .swiper-slide.five .bottom_text span{
+    font-size: 5vw;
     color: rgb(89, 199, 249);
 }
 .swiper-slide.five .bottom_text img{
@@ -411,5 +413,8 @@ body {
     top: 82%;
     position: absolute;
     font-size: 2vw;
+}
+.swiper-slide.six .form .form-control{
+    width: 100%;
 }
 /*第六屏结束*/
